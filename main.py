@@ -8,7 +8,7 @@ while convert_message:
     if user_response.upper() == "Y":
         morse_code = text_to_morse(user_input)
         print(f"Morse code for {user_input} is: {morse_code}")
-    elif user_response.lower() == "n":
+    elif user_response.upper() == "N":
         continue
     else:
         print("Terminating program...")
