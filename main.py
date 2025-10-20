@@ -1,8 +1,8 @@
 from converter import text_to_morse
 
-convert_message = True
+CLI_running = True
 
-while convert_message:
+while CLI_running:
     user_input = input("Please enter the string you would like to convert to morse code: ")
     user_response = input(f"You entered: {user_input}, is that correct? (Y/N or enter Q to quit): ")
     if user_response.upper() == "Y":
@@ -12,7 +12,7 @@ while convert_message:
         continue
     elif user_response.upper() == "Q":
         print("Thank you for using the Morse Code Converter")
-        convert_message = False
+        CLI_running = False
     else:
         print(f"The option you have entered '{user_response}' is invalid, please start again.")
         continue
