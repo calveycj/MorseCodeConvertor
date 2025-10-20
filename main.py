@@ -4,12 +4,15 @@ convert_message = True
 
 while convert_message:
     user_input = input("Please enter the string you would like to convert to morse code: ")
-    user_response = input(f"You entered: {user_input}, is that correct? (Y/N): ")
+    user_response = input(f"You entered: {user_input}, is that correct? (Y/N or enter Q to quit): ")
     if user_response.upper() == "Y":
         morse_code = text_to_morse(user_input)
         print(f"Morse code for {user_input} is: {morse_code}")
     elif user_response.upper() == "N":
         continue
-    else:
-        print("Terminating program...")
+    elif user_response.upper() == "Q":
+        print("Thank you for using the Morse Code Converter")
         convert_message = False
+    else:
+        print(f"The option you have entered '{user_response}' is invalid, please start again.")
+        continue
